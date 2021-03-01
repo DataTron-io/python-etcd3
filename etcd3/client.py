@@ -3,6 +3,8 @@ import inspect
 import threading
 
 import grpc
+import grpc._cython.cygrpc
+grpc._cython.cygrpc.init_grpc_gevent()
 import grpc._channel
 
 from six.moves import queue
