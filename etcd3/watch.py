@@ -2,7 +2,8 @@ import logging
 import threading
 
 import grpc
-
+import grpc._cython.cygrpc
+grpc._cython.cygrpc.init_grpc_gevent()
 import six
 from six.moves import queue
 
